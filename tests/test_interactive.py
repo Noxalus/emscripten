@@ -19,6 +19,9 @@ class interactive(BrowserCore):
     print 'Running the browser tests. Make sure the browser allows popups from localhost.'
     print
 
+  def test_sdl_mouse(self):
+    self.btest(path_from_root('tests', 'test_sdl_mouse.c'), expected='0')
+
   def test_html5_fullscreen(self):
     self.btest(path_from_root('tests', 'test_html5_fullscreen.c'), expected='0')
 
